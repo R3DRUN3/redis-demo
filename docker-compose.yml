@@ -1,0 +1,33 @@
+version: '3.8'
+
+# Define a specific network for this docker compose stack (Flask Web App + Prometheus + Grafana)
+networks:
+  redis_network:
+
+services:
+  redis:
+    image: redis:7.0.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    volumes: 
+      - redis:/data # named volume for redis backup (https://redis.io/docs/manual/persistence/)
+    networks:
+      - redis_network
+
+  redis_webapp:
+    build:
+      context: ./webapp
+      dockerfile: Dockerfile
+    container_name: redis_webapp
+    restart: unless-stopped
+    depends_on:
+      - redis
+    ports:
+      - '8754:8754'
+    networks:
+      - redis_network
+
+volumes:
+  redis:
+    driver: local
