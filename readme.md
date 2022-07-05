@@ -22,16 +22,16 @@ git clone https://github.com/R3DRUN3/redis-demo.git  \
 
 Visit the root of our web app at `http://localhost:8754`:
 <br>
-![alt_text](https://github.com/R3DRUN3/prometheus-demo/blob/main/images/root-endpoint.png)
+![alt_text](https://github.com/R3DRUN3/redis-demo/blob/main/images/root-endpoint.png)
 <br>
 reload the page and you will see that the counter is incrementing via Redis.
 
 Now you can submit a custom key value via a *POST* HTTP call to the key endpoint, you can to this either via curl or postman:
 <br>
-![alt_text](https://github.com/R3DRUN3/prometheus-demo/blob/main/images/post-endpoint.png)
+![alt_text](https://github.com/R3DRUN3/redis-demo/blob/main/images/post-endpoint.png)
 
-You will see the current value of your custom key with a *GET* HTTP call to the same endpoint:
+You can retrieve the current value of your custom key with a *GET* HTTP call to the same endpoint:
 <br>
-![alt_text](https://github.com/R3DRUN3/prometheus-demo/blob/main/images/get-endpoint.png)
+![alt_text](https://github.com/R3DRUN3/redis-demo/blob/main/images/get-endpoint.png)
 
 
