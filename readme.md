@@ -13,7 +13,7 @@ This repo contains a simple demo to show Redis interaction via a Flask web app.
 `docker` and  `docker-compose`
 
 ## INSTRUCTIONS
-Clone this repo and build build the stack via docker compose:
+Clone this repo and build the stack via docker compose:
 ```console
 git clone https://github.com/R3DRUN3/redis-demo.git  \
 && cd redis-demo \
